@@ -25,7 +25,7 @@ def generate_data():
                        (data['vibration'] > 8)).astype(int)
 
     data.to_csv('sensor_data.csv', index=False)
-    print("✅ Dataset generated as sensor_data.csv")
+    print(" Dataset generated as sensor_data.csv")
 
 
 # ------------------------------
@@ -43,7 +43,7 @@ def train_model():
     model.fit(X_train, y_train)
 
     joblib.dump(model, 'model.pkl')
-    print("✅ Model trained and saved as model.pkl")
+    print(" Model trained and saved as model.pkl")
 
 
 # ------------------------------
@@ -51,8 +51,8 @@ def train_model():
 # ------------------------------
 def detect_anomaly(temp, vib, pres):
     if temp > 85 or vib > 8 or pres > 40:
-        return "⚠️ Anomaly Detected"
-    return "✅ Normal"
+        return "Anomaly Detected"
+    return "Normal"
 
 
 # ------------------------------
@@ -60,9 +60,9 @@ def detect_anomaly(temp, vib, pres):
 # ------------------------------
 def maintenance_action(prediction):
     if prediction == 1:
-        return "🔧 Schedule Immediate Maintenance"
+        return " Schedule Immediate Maintenance"
     else:
-        return "🟢 Routine Monitoring"
+        return "Routine Monitoring"
 
 
 # ------------------------------
@@ -70,8 +70,8 @@ def maintenance_action(prediction):
 # ------------------------------
 def cost_analysis(prediction):
     if prediction == 1:
-        return "💰 Preventive maintenance is cheaper than breakdown!"
-    return "💰 No immediate cost risk"
+        return " Preventive maintenance is cheaper than breakdown!"
+    return "No immediate cost risk"
 
 
 # ------------------------------
@@ -94,7 +94,7 @@ def predict():
 
     print("\n===== RESULTS =====")
     print("Anomaly Status:", anomaly)
-    print("Failure Prediction:", "⚠️ Failure Likely" if prediction == 1 else "✅ No Failure")
+    print("Failure Prediction:", " Failure Likely" if prediction == 1 else " No Failure")
     print("Maintenance Advice:", maintenance_action(prediction))
     print("Cost Insight:", cost_analysis(prediction))
 
