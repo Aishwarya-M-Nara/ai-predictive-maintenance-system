@@ -13,9 +13,12 @@ This project predicts machine failure using machine learning.
 - Generates synthetic sensor data
 - Trains Random Forest model
 - Predicts equipment failure
-<img width="812" height="778" alt="PREDICTIVE_MAINTENANCE_OUTPUT" src="https://github.com/user-attachments/assets/060f9bfe-0654-474f-86e8-2c900a080fb6" />
+
 
 ## How to Run
 1. Install required libraries
 2. Run main.py file
+## OUTPUT OF AI BASED PREDICITIVE MAINTENANCE SYSTEM 
+<img width="738" height="855" alt="output_of_Predictive-maintenance" src="https://github.com/user-attachments/assets/e03cd5f8-b7a5-4ff9-bb12-15b6d1b8c364" />
+
     X 
